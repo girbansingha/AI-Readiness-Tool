@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <h2>Overall AI Readiness</h2>
+                <div class="readiness-score">
+                    <div class="score-display">
+                        <span class="score-number" id="overall-score">1.00</span>
+                        <span class="score-max">/ 4.0</span>
+                    </div>
+                    <div class="score-bar-large">
+                        <div class="score-bar-fill" id="overall-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="readiness-badge" id="readiness-badge">Beginning</div>
+                </div>
+
+                <div class="category-scores">
+                    <div class="category-score-item">
+                        <div class="category-header">
+                            <span class="category-name">Vision & Workforce</span>
+                            <span class="category-value" id="vision-score">1/4</span>
+                        </div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" id="vision-bar" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="category-score-item">
+                        <div class="category-header">
+                            <span class="category-name">Solutions & Offerings</span>
+                            <span class="category-value" id="solutions-score">1/4</span>
+                        </div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" id="solutions-bar" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="category-score-item">
+                        <div class="category-header">
+                            <span class="category-name">Accountability & Oversight</span>
+                            <span class="category-value" id="accountability-score">1/4</span>
+                        </div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" id="accountability-bar" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="category-score-item">
+                        <div class="category-header">
+                            <span class="category-name">Organizational Processes</span>
+                            <span class="category-value" id="organizational-score">1/4</span>
+                        </div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" id="organizational-bar" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="category-score-item">
+                        <div class="category-header">
+                            <span class="category-name">Integration & Results</span>
+                            <span class="category-value" id="integration-score">1/4</span>
+                        </div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" id="integration-bar" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="recommendations-section-sidebar">
+                    <h3>Your Next Steps</h3>
+                    <div class="recommendation-card-sidebar beginning" id="recommendation-card">
+                        <h4 id="recommendation-title">Beginning: Build Your AI-Ready EHS Program</h4>
+                        <div id="recommendation-text">
+                            <strong>Priority Actions:</strong>
+                            <ul>
+                                <li>Assess EHS data quality and readiness - clean and organize incident reports, safety observations, and compliance records</li>
+                                <li>Launch pilot programs for AI-assisted incident reporting, automated SDS indexing, and compliance document parsing</li>
+                                <li>Establish foundational AI governance aligned with ISO, SOC 2, and industry standards</li>
+                                <li>Build internal AI literacy through working groups and identify skill gaps in your EHS team</li>
+                                <li>Start with "human-in-the-loop" AI copilots that augment professional judgment</li>
+                                <li>Focus on quick wins that demonstrate measurable time savings and improved data quality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>AI Readiness Assessment</h1>
+                <p class="subtitle">Evaluate your organization's AI maturity across 5 key dimensions and receive personalized recommendations</p>
+            </header>
+
+            <div class="how-it-works">
+                <h3>How It Works</h3>
+                <p>Rate your organization's current maturity level for each area below. Adjust the sliders to see your overall readiness score update in real-time.</p>
+            </div>
+
+            <div id="assessment-form">
+                <section class="assessment-section">
+                    <h2 class="section-title">Vision & Workforce</h2>
+                    <p class="section-description">The organization has a clear vision for how AI strengthens EHS performance and communicates this consistently across teams. EHS staff are equipped with the skills and guidance needed to use AI responsibly through training, human-in-the-loop practices, and a culture that supports digital adoption.</p>
+
+                    <div class="question-item">
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Beginning</span>
+                                <span>Testing</span>
+                                <span>Maturing</span>
+                                <span>Leading</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="1" class="slider" data-category="vision">
+                            <div class="current-level">Current Level: <span class="level-badge beginning">Beginning</span></div>
+                        </div>
+                        <div class="level-definition" id="vision-definition">
+                            <p>Build AI awareness, identify skill gaps and encourage experimentation</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="assessment-section">
+                    <h2 class="section-title">Solutions & Offerings</h2>
+                    <p class="section-description">AI capabilities are deployed across key EHS workflows—such as incident reporting, regulatory analysis, data quality improvement, and risk detection—through reliable, integrated tools. These solutions enhance efficiency and insights by applying fit-for-purpose AI models directly within EHS processes.</p>
+
+                    <div class="question-item">
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Beginning</span>
+                                <span>Testing</span>
+                                <span>Maturing</span>
+                                <span>Leading</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="1" class="slider" data-category="solutions">
+                            <div class="current-level">Current Level: <span class="level-badge beginning">Beginning</span></div>
+                        </div>
+                        <div class="level-definition" id="solutions-definition">
+                            <p>Assess data readiness, explore AI integration in products</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="assessment-section">
+                    <h2 class="section-title">Accountability & Oversight</h2>
+                    <p class="section-description">Strong governance ensures AI used in EHS remains transparent, explainable, and compliant with safety, regulatory, and data-privacy requirements. The organization maintains auditability, human review for sensitive decisions, and clear policies for managing AI risks and performance.</p>
+
+                    <div class="question-item">
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Beginning</span>
+                                <span>Testing</span>
+                                <span>Maturing</span>
+                                <span>Leading</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="1" class="slider" data-category="accountability">
+                            <div class="current-level">Current Level: <span class="level-badge beginning">Beginning</span></div>
+                        </div>
+                        <div class="level-definition" id="accountability-definition">
+                            <p>Understand regulatory landscape, initial risk assessment</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="assessment-section">
+                    <h2 class="section-title">Organizational Processes</h2>
+                    <p class="section-description">AI is embedded into routine EHS tasks—including incident management, CAPA actions, inspections, and compliance monitoring—to reduce manual work and improve accuracy. Processes are adapted to integrate AI outputs consistently, supported by cross-functional coordination and feedback loops.</p>
+
+                    <div class="question-item">
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Beginning</span>
+                                <span>Testing</span>
+                                <span>Maturing</span>
+                                <span>Leading</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="1" class="slider" data-category="organizational">
+                            <div class="current-level">Current Level: <span class="level-badge beginning">Beginning</span></div>
+                        </div>
+                        <div class="level-definition" id="organizational-definition">
+                            <p>Provide guidelines on AI best practices, enable small-scale experimentation with working groups</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="assessment-section">
+                    <h2 class="section-title">Integration & Results</h2>
+                    <p class="section-description">AI tools connect seamlessly with EHS data sources and systems to deliver measurable improvements in safety outcomes, compliance efficiency, and reporting quality. The organization tracks adoption, performance, and ROI to ensure AI meaningfully supports risk reduction and operational decision-making.</p>
+
+                    <div class="question-item">
+                        <div class="slider-container">
+                            <div class="slider-labels">
+                                <span>Beginning</span>
+                                <span>Testing</span>
+                                <span>Maturing</span>
+                                <span>Leading</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="1" class="slider" data-category="integration">
+                            <div class="current-level">Current Level: <span class="level-badge beginning">Beginning</span></div>
+                        </div>
+                        <div class="level-definition" id="integration-definition">
+                            <p>Identify potential value, begin documenting knowledge</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
